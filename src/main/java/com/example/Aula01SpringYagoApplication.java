@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example;
 
 import java.util.Arrays;
 
@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.domain.Produto;
+import com.example.repository.ProdutoRepository;
 
 @SpringBootApplication
 public class Aula01SpringYagoApplication implements CommandLineRunner {
@@ -24,7 +27,7 @@ public class Aula01SpringYagoApplication implements CommandLineRunner {
 		Produto p3 = new Produto("computador", 2500.00,"semi nova" , false);
 		Produto p4 = new Produto("bicicleta", 500.00,"usada" , true);
 		
-		produtoRepository.saveAll(Arrays.asList(p1, p2, p3, p4));
+		//produtoRepository.saveAll(Arrays.asList(p1, p2, p3, p4));
 	}
 
 }
