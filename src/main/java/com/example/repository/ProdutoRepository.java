@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.example.domain.Produto;
 
-@Repository
+@Repository//conectar com o banco de dados
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {
 
 }

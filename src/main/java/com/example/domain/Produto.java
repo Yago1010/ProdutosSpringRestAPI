@@ -5,9 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+@Entity // se transforma em tabela do banco de dados
 public class Produto {
-
+// atributos da classe produto 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -15,10 +15,12 @@ public class Produto {
 	private Double valor;
 	private String descricao;
 	private Boolean vendido;
-	
+
+	// construtor sem parametro
 	public Produto() {
 	}
 
+	// construtor com parametro
 	public Produto(String nome, Double valor, String descricao, Boolean vendido) {
 		this.nome = nome;
 		this.valor = valor;
@@ -26,6 +28,8 @@ public class Produto {
 		this.vendido = vendido;
 	}
 
+	// os metodos gets(pega o atributo privado e mostra fora da classe) e
+	// sets(altera)
 	public Long getId() {
 		return id;
 	}
@@ -65,9 +69,5 @@ public class Produto {
 	public void setVendido(Boolean vendido) {
 		this.vendido = vendido;
 	}
-	
-	
-	
-	
-	
+
 }
